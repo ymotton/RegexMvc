@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using Fare;
 
-namespace RegexMvc.Controllers
+namespace RegexTester.Controllers
 {
     public class RegexController : Controller
     {

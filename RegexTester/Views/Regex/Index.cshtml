@@ -1,4 +1,4 @@
-﻿@model RegexMvc.Controllers.RegexViewModel
+﻿@model RegexTester.Controllers.RegexViewModel
 @using (Html.BeginForm(null, null, FormMethod.Get))
 {
     <div class="container">
@@ -8,17 +8,16 @@
 
         <div class="row">
             <div class="col-md-6">
-                <h2>Regex pattern</h2>
+                <h2>Input a Regex pattern</h2>
                 @Html.TextAreaFor(m => m.Regex, 
                             new
                             {
                                 rows = 4,
-                                cols = 90,
-                                placeholder = @"\+1 \d{3} \d{3} \d{4}"
+                                cols = 90
                             })
             </div>
             <div class="col-md-6">
-                <h2>Text to match</h2>
+                <h2>Input text to match</h2>
                 @Html.TextAreaFor(m => m.TextToMatch, 
                             new
                             {
@@ -29,11 +28,11 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h2>Results</h2>
+                <h2>Matches from input text</h2>
                 @Html.DisplayFor(m => m.Results)
             </div>
             <div class="col-md-6">
-                <h2>Samples matches</h2>
+                <h2>Sample matches <small><a href="https://github.com/moodmosaic/Fare" target="_blank"><i class="glyphicon glyphicon-info-sign"></i></a></small></h2>
                 @Html.DisplayFor(m => m.Examples, "EnumerableString")
             </div>
         </div>
