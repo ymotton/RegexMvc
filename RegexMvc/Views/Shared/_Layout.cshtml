@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Language" content="nl" />
+
+        <title>.NET Regex Tester</title>
+    
+        <meta name="viewport" content="width=device-width" />
+
+        <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/bootstrap-theme.min.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>        <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>    </head>
+    <body class="page page-index">
+
+        @RenderBody()
+        
+        @RenderSection("scripts", required: false)
+    </body></html>

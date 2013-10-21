@@ -1,0 +1,19 @@
+﻿@using System.Text.RegularExpressions
+@model GroupCollection
+
+@if (Model == null || Model.Count == 0)
+{
+    <tr class="active">No groups</tr>
+}
+else
+{
+    for (int i = 1; i < Model.Count; i++ )
+    {
+        var group = Model[i];
+        <tr class="active">
+            <td>&nbsp;</td>
+            <td colspan="2">Group #@i</td>
+        </tr>
+        @Html.DisplayFor(m => group.Captures)
+    }
+}

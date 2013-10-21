@@ -1,0 +1,23 @@
+﻿@using System.Text.RegularExpressions
+@model MatchCollection
+
+@if (Model == null || Model.Count == 0)
+{
+    <span><a href="http://msdn.microsoft.com/en-us/library/system.text.regularexpressions.regex.aspx">System.Text.RegularExpressions.Regex</a> could not find any matches</span>
+}
+else
+{
+    <table class="table table-condensed">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var match = Model[i];
+        if (!string.IsNullOrEmpty(match.Value))
+        {
+            <tr class="success">
+                <td colspan="3">Match #@i with value '@match.Value'</td>
+            </tr>
+            @Html.DisplayFor(m => match.Groups)
+        }
+    }
+    </table>
+}

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>
+
+@if (!Model.Any())
+{
+    <span><a href="https://github.com/moodmosaic/Fare">FARE</a> could not find any matches</span>    
+}
+else
+{
+    <table class="table table-condensed table-striped">
+        @foreach (var item in Model)
+        {
+            <tr><td>@item</td></tr>
+        }
+    </table>
+}

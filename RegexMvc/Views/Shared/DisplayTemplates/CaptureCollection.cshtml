@@ -1,0 +1,17 @@
+﻿@using System.Text.RegularExpressions
+@model CaptureCollection
+
+@if (Model == null || Model.Count == 0)
+{
+    <tr class="">No captures</tr>
+}
+else
+{
+    foreach (Capture capture in Model)
+    {
+        <tr class="">
+            <td colspan="2">&nbsp;</td>
+            <td>Capture at position '@capture.Index' with value '@capture.Value'</td>
+        </tr>
+    }
+}
